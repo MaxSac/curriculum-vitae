@@ -1,65 +1,79 @@
 import pywal
 import click
-from urllib import request
 import pathlib
+from urllib import request
+from PIL import Image
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 
+def download_logo(url, build_dir):
+    filename = build_dir / f"logo.{url.split('.')[-1]}"
+    request.urlretrieve(url, filename=filename)
+    return filename
+
+
+def plot_color(ax, colors):
+    text_args = {
+        "fontsize": 12,
+        "verticalalignment": "center",
+        # "horizontalalignment": "center",
+        # "rotation": "vertical",
+    }
+
+    rec_args = {"width": 1, "height": 1}
+
+    for i, ith_color in enumerate(colors["colors"].values()):
+        rec = Rectangle(xy=(0, i), facecolor=ith_color, **rec_args)
+        ax.add_patch(rec)
+        ax.text(1.1, i + 0.5, f"{i} / {ith_color}", **text_args)
+
+    ax.set_axis_off()
+    ax.set_ylim(0, 16)
+    ax.set_xlim(0, 2)
+
+
+def plot_logo(ax, filename):
+    img = Image.open(filename)
+    ax.imshow(img)
+    ax.set_axis_off()
+
+
 @click.command()
-@click.option("--logo_url", help="logo url")
+@click.option("--url", help="logo url")
 @click.option("--color_name", help="logo url", default=None)
-def main(logo_url, color_name):
+def main(url, color_name):
 
-    url = pathlib.Path(logo_url)
-    logo_filename = pathlib.Path("build/logo").with_suffix(url.suffix)
+    build_dir = pathlib.Path("build")
 
-    request.urlretrieve(logo_url, filename=logo_filename)
+    if not build_dir.exists():
+        build_dir.mkdir()
 
-    image = pywal.image.get(logo_filename)
-    colors = pywal.colors.get(image)
+    filename = download_logo(url, build_dir)
+    colors = pywal.colors.get(str(filename.resolve()))
 
-    if not color_name:
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        text_args = {
-            "fontsize": 14,
-            "horizontalalignment": "center",
-            "verticalalignment": "bottom",
-            "rotation": "vertical",
-        }
-        rec_args = {"width": 1, "height": 1}
-        for i, (name, color) in enumerate(colors["colors"].items()):
-            rec = Rectangle(xy=(i, 0), facecolor=color, label=name, **rec_args)
-            ax.add_patch(rec)
-            ax.text(i + 0.5, 1.1, name, **text_args)
-        ax.set_axis_off()
-        ax.set_xlim(0, 16)
-        ax.set_ylim(0, 2)
-        plt.show()
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 2, 1)
+    ax2 = fig.add_subplot(1, 2, 2)
+    plot_color(ax, colors)
+    plot_logo(ax2, filename)
+    plt.show()
 
-    color = "DC3522"
-    if color_name:
-        color = colors["colors"][color_name][1:]
+    color_i = input("Choose awesome color [0-15]:")
+    color = colors["colors"][f"color{color_i}"][1:]
 
     lines = [
-        "% Color for highlights\n"
-        "% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange\n"
-        "%                 awesome-nephritis, awesome-concrete, awesome-darknight\n"
-        "% \colorlet{awesome}{awesome-red}\n"
-        "% Uncomment if you would like to specify your own color\n"
         f"\definecolor{{awesome}}{{HTML}}{{{color}}}\n"
         "\n"
         "% Colors for text\n"
-        "% Uncomment if you would like to specify your own color\n"
         "\definecolor{darktext}{HTML}{414141}\n"
         "\definecolor{text}{HTML}{333333}\n"
         "\definecolor{graytext}{HTML}{5D5D5D}\n"
         "\definecolor{lighttext}{HTML}{999999}\n"
     ]
 
-    with open("colors.tex", "w") as f:
+    with open(build_dir / "colors.tex", "w") as f:
         for l in lines:
             f.write(l)
 

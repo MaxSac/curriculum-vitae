@@ -2,10 +2,8 @@ OBJDIR := build
 OBJS := $(addprefix $(OBJDIR)/,cv.pdf coverletter.pdf)
 
 CC = xelatex
-CV_DIR = cv
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
 
-cv.pdf: cv.tex $(CV_SRCS)
+cv.pdf: cv.tex
 	$(CC) -output-directory=$(OBJDIR) $<
 
 coverletter.pdf: coverletter.tex

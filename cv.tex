@@ -18,7 +18,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt, a4paper]{Awesome-CV/awesome-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -26,10 +26,11 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
+\input{build/colors}
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+% \colorlet{awesome}{awesome-red}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -52,16 +53,15 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Claud D.}{Park}
+\photo{images/Bewerbungsfoto.JPG}
+\name{Maximilian}{Sackel}
 \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
+\address{Meckinckweg 15, 44309 Dortmund, Germany}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+\mobile{(+49) 1578-3291423}
+\email{mail@maxsac.de}
+\homepage{maxsac.github.com}
+\github{maxsac}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -73,7 +73,7 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
 
-\quote{``Be the change that you want to see in the world."}
+% \quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
@@ -95,15 +95,267 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {B.S. in Computer Science and Engineering} % Degree
+    {POSTECH(Pohang University of Science and Technology)} % Institution
+    {Pohang, S.Korea} % Location
+    {Mar. 2010 - Aug. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Skills}
+\begin{cvskills}
+
+%---------------------------------------------------------
+  \cvskill
+    {DevOps} % Category
+    {AWS, Docker, Kubernetes, Rancher, Vagrant, Packer, Terraform, Jenkins, CircleCI} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Back-end} % Category
+    {Koa, Express, Django, REST API} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Front-end} % Category
+    {Hugo, Redux, React, HTML5, LESS, SASS} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Programming} % Category
+    {Node.js, Python, JAVA, OCaml, LaTeX} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Languages} % Category
+    {Korean, English, Japanese} % Skills
+
+%---------------------------------------------------------
+\end{cvskills}
+
+\cvsection{Experience}
+\begin{cventries}
+%---------------------------------------------------------
+  \cventry
+    {Software Architect} % Job title
+    {Omnious. Co., Ltd.} % Organization
+    {Seoul, S.Korea} % Location
+    {Jun. 2017 - May. 2018} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Provisioned an easily managable hybrid infrastructure(Amazon AWS + On-premise) utilizing IaC(Infrastructure as Code) tools like Ansible, Packer and Terraform.}
+        \item {Built fully automated CI/CD pipelines on CircleCI for containerized applications using Docker, AWS ECR and Rancher.}
+        \item {Designed an overall service architecture and pipelines of the Machine Learning based Fashion Tagging API SaaS product with the micro-services architecture.}
+        \item {Implemented several API microservices in Node.js Koa and in the serverless AWS Lambda functions.}
+        \item {Deployed a centralized logging environment(ELK, Filebeat, CloudWatch, S3) which gather log data from docker containers and AWS resources.}
+        \item {Deployed a centralized monitoring environment(Grafana, InfluxDB, CollectD) which gather system metrics as well as docker run-time metrics.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Co-founder \& Software Engineer} % Job title
+    {PLAT Corp.} % Organization
+    {Seoul, S.Korea} % Location
+    {Jan. 2016 - Jun. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Implemented RESTful API server for car rental booking application(CARPLAT in Google Play).}
+        \item {Built and deployed overall service infrastructure utilizing Docker container, CircleCI, and several AWS stack(Including EC2, ECS, Route 53, S3, CloudFront, RDS, ElastiCache, IAM), focusing on high-availability, fault tolerance, and auto-scaling.}
+        \item {Developed an easy-to-use Payment module which connects to major PG(Payment Gateway) companies in Korea.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Researcher} % Job title
+    {Undergraduate Research, Machine Learning Lab(Prof. Seungjin Choi)} % Organization
+    {Pohang, S.Korea} % Location
+    {Mar. 2016 - Exp. Jun. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Researched classification algorithms(SVM, CNN) to improve accuracy of human exercise recognition with wearable device.}
+        \item {Developed two TIZEN applications to collect sample data set and to recognize user exercise on SAMSUNG Gear S.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer \& Security Researcher (Compulsory Military Service)} % Job title
+    {R.O.K Cyber Command, MND} % Organization
+    {Seoul, S.Korea} % Location
+    {Aug. 2014 - Apr. 2016} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Lead engineer on agent-less backtracking system that can discover client device's fingerprint(including public and private IP) independently of the Proxy, VPN and NAT.}
+        \item {Implemented a distributed web stress test tool with high anonymity.}
+        \item {Implemented a military cooperation system which is web based real time messenger in Scala on Lift.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Game Developer Intern at Global Internship Program} % Job title
+    {NEXON} % Organization
+    {Seoul, S.Korea \& LA, U.S.A} % Location
+    {Jan. 2013 - Feb. 2013} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Developed in Cocos2d-x an action puzzle game(Dragon Buster) targeting U.S. market.}
+        \item {Implemented API server which is communicating with game client and In-App Store, along with two other team members who wrote the game logic and designed game graphics.}
+        \item {Won the 2nd prize in final evaluation.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Researcher for <Detecting video’s torrents using image similarity algorithms>} % Job title
+    {Undergraduate Research, Computer Vision Lab(Prof. Bohyung Han)} % Organization
+    {Pohang, S.Korea} % Location
+    {Sep. 2012 - Feb. 2013} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Researched means of retrieving a corresponding video based on image contents using image similarity algorithm.}
+        \item {Implemented prototype that users can obtain torrent magnet links of corresponding video relevant to an image on web site.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer Trainee} % Job title
+    {Software Maestro (funded by Korea Ministry of Knowledge and Economy)} % Organization
+    {Seoul, S.Korea} % Location
+    {Jul. 2012 - Jun. 2013} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Performed research memory management strategies of OS and implemented in Python an interactive simulator for Linux kernel memory management.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer} % Job title
+    {ShitOne Corp.} % Organization
+    {Seoul, S.Korea} % Location
+    {Dec. 2011 - Feb. 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Developed a proxy drive smartphone application which connects proxy driver and customer. Implemented overall Android application logic and wrote API server for community service, along with lead engineer who designed bidding protocol on raw socket and implemented API server for bidding.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Freelance Penetration Tester} % Job title
+    {SAMSUNG Electronics} % Organization
+    {S.Korea} % Location
+    {Sep. 2013, Mar. 2011 - Oct. 2011} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Conducted penetration testing on SAMSUNG KNOX, which is solution for enterprise mobile security.}
+        \item {Conducted penetration testing on SAMSUNG Smart TV.}
+      \end{cvitems}
+      %\begin{cvsubentries}
+      %  \cvsubentry{}{KNOX(Solution for Enterprise Mobile Security) Penetration Testing}{Sep. 2013}{}
+      %  \cvsubentry{}{Smart TV Penetration Testing}{Mar. 2011 - Oct. 2011}{}
+      %\end{cvsubentries}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Presentation}
 
 
 %-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Presenter for <Hosting Web Application for Free utilizing GitHub, Netlify and CloudFlare>} % Role
+    {DevFest Seoul by Google Developer Group Korea} % Event
+    {Seoul, S.Korea} % Location
+    {Nov. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Introduced the history of web technology and the JAM stack which is for the modern web application development.}
+        \item {Introduced how to freely host the web application with high performance utilizing global CDN services.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Presenter for <DEFCON 20th : The way to go to Las Vegas>} % Role
+    {6th CodeEngn (Reverse Engineering Conference)} % Event
+    {Seoul, S.Korea} % Location
+    {Jul. 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Introduced CTF(Capture the Flag) hacking competition and advanced techniques and strategy for CTF}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Presenter for <Metasploit 101>} % Role
+    {6th Hacking Camp - S.Korea} % Event
+    {S.Korea} % Location
+    {Sep. 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Introduced basic procedure for penetration testing and how to use Metasploit}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+\cvsection{Writing}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Founder \& Writer} % Role
+    {A Guide for Developers in Start-up} % Title
+    {Facebook Page} % Location
+    {Jan. 2015 - PRESENT} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Drafted daily news for developers in Korea about IT technologies, issues about start-up.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Undergraduate Student Reporter} % Role
+    {AhnLab} % Title
+    {S.Korea} % Location
+    {Oct. 2012 - Jul. 2013} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Drafted reports about IT trends and Security issues on AhnLab Company magazine.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+
 \end{document}
