@@ -18,7 +18,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt, a4paper]{Awesome-CV/awesome-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -26,7 +26,8 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
-\include{colors.tex}
+% Color for highlights
+\input{build/colors}
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
@@ -35,33 +36,7 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[circle,noedge,left]{./Bewerbungsfoto01_cropped.JPG}
-\name{Maximilian}{Sackel}
-\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{Meckinckweg 15, 44309 Dortmund, Germany}
-
-\mobile{(+49) 1578-3291423}
-\email{mail@maxsac.de}
-\homepage{maxsac.github.com}
-\github{maxsac}
-% \linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra informations}
-
-% \quote{``Be the change that you want to see in the world."}
+\input{letterhead}
 
 
 %-------------------------------------------------------------------------------
@@ -95,7 +70,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {M.~Sackel~~~·~~~Cover Letter}
+  {Maximilian Sackel~~~·~~~Cover Letter}
   {}
 
 % Print the title with above letter informations
