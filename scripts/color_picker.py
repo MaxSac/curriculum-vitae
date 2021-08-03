@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 
-def download_logo(url, build_dir):
-    filename = build_dir / f"logo.{url.split('.')[-1]}"
+def download_logo(url):
+    filename = pathlib.Path("/tmp") / f"logo.{url.split('.')[-1]}"
     request.urlretrieve(url, filename=filename)
     return filename
 
@@ -42,15 +42,15 @@ def plot_logo(ax, filename):
 
 @click.command()
 @click.option("--url", help="logo url")
-@click.option("--color_name", help="logo url", default=None)
-def main(url, color_name):
+@click.option("--build_dir", help="build directory", default="build")
+def main(url, build_dir):
 
-    build_dir = pathlib.Path("build")
+    build_dir = pathlib.Path(build_dir)
 
     if not build_dir.exists():
         build_dir.mkdir()
 
-    filename = download_logo(url, build_dir)
+    filename = download_logo(url)
     colors = pywal.colors.get(str(filename.resolve()))
 
     fig = plt.figure()
