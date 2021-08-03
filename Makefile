@@ -1,18 +1,17 @@
 OBJDIR := build
 OBJS := $(addprefix $(OBJDIR)/,cv.pdf coverletter.pdf)
-
-CC = xelatex
+URL := "https://www.gfz-potsdam.de/fileadmin/gfz/medien_kommunikation/pics/LOGO-GFZ-de-mitFreistellungsraum_RGB_24bit_300dpi_546x390-jpg.jpg"
 
 all: $(OBJS)
 
-fonts:
-	ln -s Awesome-CV/fonts .
-
-scripts/colors.tex:
-	make -C scripts colors.tex
+scripts/colors.tex: scripts/color_picker.py
+	make -C scripts colors.tex URL=$(URL)
 
 $(OBJDIR)/%.pdf: content/%.tex scripts/colors.tex fonts
-	$(CC) -output-directory=$(OBJDIR) content/$*.tex
+	xelatex -output-directory=$(OBJDIR) content/$*.tex
+
+fonts:
+	ln -s Awesome-CV/$@ $@
 
 $(OBJS): | $(OBJDIR)
 
