@@ -1,22 +1,14 @@
 OBJDIR := build
-OBJS := $(addprefix $(OBJDIR)/,cv.pdf coverletter.pdf)
-URL := "https://www.gfz-potsdam.de/fileadmin/gfz/medien_kommunikation/pics/LOGO-GFZ-de-mitFreistellungsraum_RGB_24bit_300dpi_546x390-jpg.jpg"
+OBJS := cv.pdf coverletter.pdf
 
-CC = xelatex
+all: $(OBJS)
 
-cv.pdf: cv.tex $(OBJDIR)/colors.tex
-	$(CC) -output-directory=$(OBJDIR) $<
+cv.pdf:
+	make -C content $(OBJDIR)/$@
 
-coverletter.pdf: coverletter.tex $(OBJDIR)/colors.tex
-	$(CC) -output-directory=$(OBJDIR) $<
-
-$(OBJDIR)/colors.tex: color_picker.py
-	python color_picker.py --url $(URL)
-
-$(OBJS): | $(OBJDIR)
-
-$(OBJDIR):
-	mkdir $(OBJDIR)
+coverletter.pdf:
+	make -C content $(OBJDIR)/$@
 
 clean:
-	rm -rf $(OBJDIR)
+	make -C scripts clean
+	make -C content clean

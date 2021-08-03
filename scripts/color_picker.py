@@ -60,7 +60,7 @@ def main(url, color_name):
     plot_logo(ax2, filename)
     plt.show()
 
-    color_i = input("Choose awesome color [0-15]:")
+    color_i = input("Choose awesome color [0-15]: ")
     color = colors["colors"][f"color{color_i}"][1:]
 
     lines = [
