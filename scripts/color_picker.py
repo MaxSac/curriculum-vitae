@@ -3,13 +3,16 @@ import click
 import pathlib
 from urllib import request
 from PIL import Image
+from datetime import datetime
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 
 def download_logo(url):
-    filename = pathlib.Path("/tmp") / f"logo.{url.split('.')[-1]}"
+    t = datetime.now().isoformat()
+    suffix =url.split('.')[-1]
+    filename = pathlib.Path("/tmp") / f"logos_{t}.{suffix}"
     request.urlretrieve(url, filename=filename)
     return filename
 
