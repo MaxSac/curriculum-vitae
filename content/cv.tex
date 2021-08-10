@@ -48,275 +48,191 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
-  {Maximilian Sackel~~~·~~~Curriculum Vitae}
-  {\thepage}
+{\today}
+{Maximilian Sackel~~~·~~~Curriculum Vitae}
+{\thepage}
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
+%   CV/RESUME CONTENT
+%   Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
 \cvsection{Education}
 \begin{cventries}
-  \cventry
-    {B.S. in Computer Science and Engineering} % Degree
-    {POSTECH(Pohang University of Science and Technology)} % Institution
-    {Pohang, S.Korea} % Location
-    {Mar. 2010 - Aug. 2017} % Date(s)
+    \cventry
+    {M.Sc. in Physics} % Degree
+    {TU Dortmund (Technical University Dortmund)} % Institution
+    {Dortmund, Germany} % Location
+    {Oct. 2018 - Jun. 2021} % Date(s)
     {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
-      \end{cvitems}
-    }
+        \begin{cvitems} % Description(s) bullet points
+        \item {Thesis: First electromagnetic interaction modelin CORSIKA8 using the Monte Carlosimulation tool PROPOSAL.}
+        \end{cvitems}
+    }%
+
+    \cventry
+    {B.Sc. in Physics} % Degree
+    {TU Dortmund (Technical University Dortmund)} % Institution
+    {Dortmund, Germany} % Location
+    {Oct. 2014 - Sep. 2018} % Date(s)
+    {
+        \begin{cvitems} % Description(s) bullet points
+        \item {Thesis: Gamma/Hadron separation with measured background data with FACT.}
+        \end{cvitems}
+    }%
+
+    \cventry
+    {Hochschulreife} % Degree
+    {KKG Dortmund (Käthe-Kollwitz-Gymnasium Dortmund)} % Institution
+    {Dortmund, Germany} % Location
+    {Aug. 2006 - Jun. 2014} % Date(s)
+    {
+        \begin{cvitems} % Description(s) bullet points
+        \item {Advanced courses in mathematics and physics.}
+        \end{cvitems}
+    }%
 \end{cventries}
 
 \cvsection{Skills}
 \begin{cvskills}
 
-%---------------------------------------------------------
-  \cvskill
-    {DevOps} % Category
-    {AWS, Docker, Kubernetes, Rancher, Vagrant, Packer, Terraform, Jenkins, CircleCI} % Skills
+    %%---------------------------------------------------------
+    %\cvskill
+    %{DevOps} % Category
+    %{AWS, Docker, Kubernetes, Rancher, Vagrant, Packer, Terraform, Jenkins, CircleCI} % Skills
 
-%---------------------------------------------------------
-  \cvskill
-    {Back-end} % Category
-    {Koa, Express, Django, REST API} % Skills
+    %%---------------------------------------------------------
+    %\cvskill
+    %{Back-end} % Category
+    %{Koa, Express, Django, REST API} % Skills
 
-%---------------------------------------------------------
-  \cvskill
-    {Front-end} % Category
-    {Hugo, Redux, React, HTML5, LESS, SASS} % Skills
+    %---------------------------------------------------------
+    \cvskill
+    {Build Automation} % Category
+    {CMake, Make, Conan, pip} % Skills
 
-%---------------------------------------------------------
-  \cvskill
+    \cvskill
+    {3D Printing}
+    {Onshape, OpenSCAD, PrusaSlicer, Octoprint}
+
+    %%---------------------------------------------------------
+    %\cvskill
+    %{Operating Systems} % Category
+    %{Linux} % Skills
+
+    %---------------------------------------------------------
+    \cvskill
     {Programming} % Category
-    {Node.js, Python, JAVA, OCaml, LaTeX} % Skills
+    {C++17, Python3, LaTeX, SQLite, git} % Skills
 
-%---------------------------------------------------------
-  \cvskill
+    %---------------------------------------------------------
+    \cvskill
+    {ML \& Data Mining} % Category
+    {pandas, scipy, scikit-learn, PyTorch} % Skills
+
+    %---------------------------------------------------------
+    \cvskill
     {Languages} % Category
-    {Korean, English, Japanese} % Skills
+    {German, English} % Skills
 
-%---------------------------------------------------------
+    %---------------------------------------------------------
 \end{cvskills}
 
 \cvsection{Experience}
 \begin{cventries}
-%---------------------------------------------------------
-  \cventry
-    {Software Architect} % Job title
-    {Omnious. Co., Ltd.} % Organization
-    {Seoul, S.Korea} % Location
-    {Jun. 2017 - May. 2018} % Date(s)
+
+    %---------------------------------------------------------
+    \cventry
+    {Teaching Assistant} % Job title
+    {Statistical methods of data analysis (Prof.~Dr.~Dr.~W.~Rhode)} % Organization
+    {Dortmund, Germany} % Location
+    {Oct. 2018 - Sep. 2020} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Provisioned an easily managable hybrid infrastructure(Amazon AWS + On-premise) utilizing IaC(Infrastructure as Code) tools like Ansible, Packer and Terraform.}
-        \item {Built fully automated CI/CD pipelines on CircleCI for containerized applications using Docker, AWS ECR and Rancher.}
-        \item {Designed an overall service architecture and pipelines of the Machine Learning based Fashion Tagging API SaaS product with the micro-services architecture.}
-        \item {Implemented several API microservices in Node.js Koa and in the serverless AWS Lambda functions.}
-        \item {Deployed a centralized logging environment(ELK, Filebeat, CloudWatch, S3) which gather log data from docker containers and AWS resources.}
-        \item {Deployed a centralized monitoring environment(Grafana, InfluxDB, CollectD) which gather system metrics as well as docker run-time metrics.}
-      \end{cvitems}
+        \begin{cvitems} % Description(s) of tasks/responsibilities
+        % \item {The appropriate use of statistical methods for the analysis of
+        %     moderate to very large amounts of data is instucted on the basis of the chronological sequence of a data analysis.}
+        \item {Teaching 4/5-B.Sc.\ or 1/2-M.Sc.~students in the appropriate use of statistical methods to analyze moderate to very large data sets.}
+        \end{cvitems}
     }
 
-%---------------------------------------------------------
-  \cventry
-    {Co-founder \& Software Engineer} % Job title
-    {PLAT Corp.} % Organization
-    {Seoul, S.Korea} % Location
-    {Jan. 2016 - Jun. 2017} % Date(s)
+    %---------------------------------------------------------
+    \cventry
+    {Working group Member} % Job title
+    {Towards a next generation of CORSIKA} % Organization
+    {Karlsruhe, Germany} % Location
+    {Nov. 2019 - PRESENT} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Implemented RESTful API server for car rental booking application(CARPLAT in Google Play).}
-        \item {Built and deployed overall service infrastructure utilizing Docker container, CircleCI, and several AWS stack(Including EC2, ECS, Route 53, S3, CloudFront, RDS, ElastiCache, IAM), focusing on high-availability, fault tolerance, and auto-scaling.}
-        \item {Developed an easy-to-use Payment module which connects to major PG(Payment Gateway) companies in Korea.}
-      \end{cvitems}
+        \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Experiences in working group organized development of the most used simulation program in astroparticle physics.}
+        \end{cvitems}
     }
 
-%---------------------------------------------------------
-  \cventry
-    {Researcher} % Job title
-    {Undergraduate Research, Machine Learning Lab(Prof. Seungjin Choi)} % Organization
-    {Pohang, S.Korea} % Location
-    {Mar. 2016 - Exp. Jun. 2017} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Researched classification algorithms(SVM, CNN) to improve accuracy of human exercise recognition with wearable device.}
-        \item {Developed two TIZEN applications to collect sample data set and to recognize user exercise on SAMSUNG Gear S.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Software Engineer \& Security Researcher (Compulsory Military Service)} % Job title
-    {R.O.K Cyber Command, MND} % Organization
-    {Seoul, S.Korea} % Location
-    {Aug. 2014 - Apr. 2016} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Lead engineer on agent-less backtracking system that can discover client device's fingerprint(including public and private IP) independently of the Proxy, VPN and NAT.}
-        \item {Implemented a distributed web stress test tool with high anonymity.}
-        \item {Implemented a military cooperation system which is web based real time messenger in Scala on Lift.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Game Developer Intern at Global Internship Program} % Job title
-    {NEXON} % Organization
-    {Seoul, S.Korea \& LA, U.S.A} % Location
-    {Jan. 2013 - Feb. 2013} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Developed in Cocos2d-x an action puzzle game(Dragon Buster) targeting U.S. market.}
-        \item {Implemented API server which is communicating with game client and In-App Store, along with two other team members who wrote the game logic and designed game graphics.}
-        \item {Won the 2nd prize in final evaluation.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Researcher for <Detecting video’s torrents using image similarity algorithms>} % Job title
-    {Undergraduate Research, Computer Vision Lab(Prof. Bohyung Han)} % Organization
-    {Pohang, S.Korea} % Location
-    {Sep. 2012 - Feb. 2013} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Researched means of retrieving a corresponding video based on image contents using image similarity algorithm.}
-        \item {Implemented prototype that users can obtain torrent magnet links of corresponding video relevant to an image on web site.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Software Engineer Trainee} % Job title
-    {Software Maestro (funded by Korea Ministry of Knowledge and Economy)} % Organization
-    {Seoul, S.Korea} % Location
-    {Jul. 2012 - Jun. 2013} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Performed research memory management strategies of OS and implemented in Python an interactive simulator for Linux kernel memory management.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Software Engineer} % Job title
-    {ShitOne Corp.} % Organization
-    {Seoul, S.Korea} % Location
-    {Dec. 2011 - Feb. 2012} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Developed a proxy drive smartphone application which connects proxy driver and customer. Implemented overall Android application logic and wrote API server for community service, along with lead engineer who designed bidding protocol on raw socket and implemented API server for bidding.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Freelance Penetration Tester} % Job title
-    {SAMSUNG Electronics} % Organization
-    {S.Korea} % Location
-    {Sep. 2013, Mar. 2011 - Oct. 2011} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Conducted penetration testing on SAMSUNG KNOX, which is solution for enterprise mobile security.}
-        \item {Conducted penetration testing on SAMSUNG Smart TV.}
-      \end{cvitems}
-      %\begin{cvsubentries}
-      %  \cvsubentry{}{KNOX(Solution for Enterprise Mobile Security) Penetration Testing}{Sep. 2013}{}
-      %  \cvsubentry{}{Smart TV Penetration Testing}{Mar. 2011 - Oct. 2011}{}
-      %\end{cvsubentries}
-    }
-
-%---------------------------------------------------------
 \end{cventries}
 
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+%   SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{Presentation}
 
 
 %-------------------------------------------------------------------------------
-%	CONTENT
+%   CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
-  \cventry
-    {Presenter for <Hosting Web Application for Free utilizing GitHub, Netlify and CloudFlare>} % Role
-    {DevFest Seoul by Google Developer Group Korea} % Event
-    {Seoul, S.Korea} % Location
-    {Nov. 2017} % Date(s)
+    %---------------------------------------------------------
+    \cventry
+    {Presenter for <Electromagnetic shower simulation using PROPOSAL>} % Role
+    {CORSIKA Cosmic Ray Simulation Workshop at Karlsruhe Institute of Technology} % Event
+    {Karlsruhe, Germany} % Location
+    {Jun. 2020} % Date(s)
     {
-      \begin{cvitems} % Description(s)
-        \item {Introduced the history of web technology and the JAM stack which is for the modern web application development.}
-        \item {Introduced how to freely host the web application with high performance utilizing global CDN services.}
-      \end{cvitems}
+        \begin{cvitems} % Description(s)
+        \item {Introduce the first leptonic and photonic interaction model in
+                the recent version of the Monte Carlo library for extensiv air
+            shower.}
+        \item {Insights into how the underlying runtime intensive computations can be performed effectively on resource limited systems.}
+        \end{cvitems}
     }
 
-%---------------------------------------------------------
-  \cventry
-    {Presenter for <DEFCON 20th : The way to go to Las Vegas>} % Role
-    {6th CodeEngn (Reverse Engineering Conference)} % Event
-    {Seoul, S.Korea} % Location
-    {Jul. 2012} % Date(s)
-    {
-      \begin{cvitems} % Description(s)
-        \item {Introduced CTF(Capture the Flag) hacking competition and advanced techniques and strategy for CTF}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Presenter for <Metasploit 101>} % Role
-    {6th Hacking Camp - S.Korea} % Event
-    {S.Korea} % Location
-    {Sep. 2012} % Date(s)
-    {
-      \begin{cvitems} % Description(s)
-        \item {Introduced basic procedure for penetration testing and how to use Metasploit}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
 \end{cventries}
 \cvsection{Writing}
 
 
 %-------------------------------------------------------------------------------
-%	CONTENT
+%   CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
-  \cventry
-    {Founder \& Writer} % Role
-    {A Guide for Developers in Start-up} % Title
-    {Facebook Page} % Location
-    {Jan. 2015 - PRESENT} % Date(s)
+    %---------------------------------------------------------
+    \cventry
+    {Co-Writer} % Role
+    {Evaluate electromagnetic modell against state of the art competitors} % Title
+    {ICRC Berlin, Germany} % Location
+    {Jul. 2021} % Date(s)
     {
-      \begin{cvitems} % Description(s)
-        \item {Drafted daily news for developers in Korea about IT technologies, issues about start-up.}
-      \end{cvitems}
+        \begin{cvitems} % Description(s)
+        \item {Comparisons of typical electromagnetic quantities against standard tools to evaluate the new electromagnetic module based on PROPOSAL.  DOI:~\href{https://doi.org/10.22323/1.395.0428}{10.22323/1.395.0428}
+            }
+        \end{cvitems}
     }
 
-%---------------------------------------------------------
-  \cventry
-    {Undergraduate Student Reporter} % Role
-    {AhnLab} % Title
-    {S.Korea} % Location
-    {Oct. 2012 - Jul. 2013} % Date(s)
+    %---------------------------------------------------------
+    \cventry
+    {Co-Writer} % Role
+    {Physical extentions of PROPOSAL to support new application areas} % Title
+    {ICPPA Moscow, Russian Fed.} % Location
+    {Dec. 2020} % Date(s)
     {
-      \begin{cvitems} % Description(s)
-        \item {Drafted reports about IT trends and Security issues on AhnLab Company magazine.}
-      \end{cvitems}
+        \begin{cvitems} % Description(s)
+        \item {Implementation of new photonic and electrical processes for the
+                development of an electromagnetic module that can form the basis of
+            large-scale high-energy Monte Carlo simulations. DOI:~\href{https://doi.org/10.1088/1742-6596/1690/1/012021}{10.1088/1742-6596/1690/1/012021}}
+        \end{cvitems}
     }
 
-%---------------------------------------------------------
+    %---------------------------------------------------------
 \end{cventries}
 
 
