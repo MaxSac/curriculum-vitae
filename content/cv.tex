@@ -36,6 +36,8 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
+\newcommand{\hobby}[3]{\hbox{{\Large{#1}}\quad\parbox{4.5cm}{{#2}\\{\bodyfontlight{#3}}}}}%
+
 \input{content/letterhead}
 
 %-------------------------------------------------------------------------------
@@ -67,7 +69,7 @@
     {Oct. 2018 - Jun. 2021} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
-        \item {Thesis: First electromagnetic interaction modelin CORSIKA8 using the Monte Carlosimulation tool PROPOSAL.}
+        \item {Thesis: First electromagnetic interaction modeling CORSIKA~8 using the Monte Carlo simulation tool PROPOSAL}
         \end{cvitems}
     }%
 
@@ -78,7 +80,7 @@
     {Oct. 2014 - Sep. 2018} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
-        \item {Thesis: Gamma/Hadron separation with measured background data with FACT.}
+        \item {Thesis: Gamma/Hadron separation with measured background data with FACT}
         \end{cvitems}
     }%
 
@@ -89,7 +91,7 @@
     {Aug. 2006 - Jun. 2014} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
-        \item {Advanced courses in mathematics and physics.}
+        \item {Advanced courses in mathematics and physics}
         \end{cvitems}
     }%
 \end{cventries}
@@ -150,9 +152,9 @@
     {Oct. 2018 - Sep. 2020} % Date(s)
     {
         \begin{cvitems} % Description(s) of tasks/responsibilities
-        % \item {The appropriate use of statistical methods for the analysis of
-        %     moderate to very large amounts of data is instucted on the basis of the chronological sequence of a data analysis.}
-        \item {Teaching 4/5-B.Sc.\ or 1/2-M.Sc.~students in the appropriate use of statistical methods to analyze moderate to very large data sets.}
+            % \item {The appropriate use of statistical methods for the analysis of
+            %     moderate to very large amounts of data is instucted on the basis of the chronological sequence of a data analysis.}
+        \item {Teaching 4/5-B.Sc.\ or 1/2-M.Sc.~students in the appropriate use of statistical methods to analyze moderate to very large data sets}
         \end{cvitems}
     }
 
@@ -164,7 +166,7 @@
     {Nov. 2019 - PRESENT} % Date(s)
     {
         \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Experiences in working group organized development of the most used simulation program in astroparticle physics.}
+        \item {Experiences in working group for organized development of the most used simulation program in astroparticle physics}
         \end{cvitems}
     }
 
@@ -173,7 +175,7 @@
 %-------------------------------------------------------------------------------
 %   SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Presentation}
+\cvsection{Publication \& Talks}
 
 
 %-------------------------------------------------------------------------------
@@ -196,24 +198,15 @@
         \end{cvitems}
     }
 
-\end{cventries}
-\cvsection{Writing}
-
-
-%-------------------------------------------------------------------------------
-%   CONTENT
-%-------------------------------------------------------------------------------
-\begin{cventries}
-
     %---------------------------------------------------------
     \cventry
     {Co-Writer} % Role
-    {Evaluate electromagnetic modell against state of the art competitors} % Title
+    {Electromagnetic Shower Simulation for CORSIKA 8} % Title
     {ICRC Berlin, Germany} % Location
     {Jul. 2021} % Date(s)
     {
         \begin{cvitems} % Description(s)
-        \item {Comparisons of typical electromagnetic quantities against standard tools to evaluate the new electromagnetic module based on PROPOSAL.  DOI:~\href{https://doi.org/10.22323/1.395.0428}{10.22323/1.395.0428}
+        \item {Comparison of typical electromagnetic quantities against standard tools to evaluate the new electromagnetic module based on PROPOSAL.  DOI:~\href{https://doi.org/10.22323/1.395.0428}{10.22323/1.395.0428}
             }
         \end{cvitems}
     }
@@ -221,7 +214,7 @@
     %---------------------------------------------------------
     \cventry
     {Co-Writer} % Role
-    {Physical extentions of PROPOSAL to support new application areas} % Title
+    {PROPOSAL:\@ A library to propagate leptons and high energy photons} % Title
     {ICPPA Moscow, Russian Fed.} % Location
     {Dec. 2020} % Date(s)
     {
@@ -232,8 +225,24 @@
         \end{cvitems}
     }
 
-    %---------------------------------------------------------
 \end{cventries}
+
+%-------------------------------------------------------------------------------
+%   SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Hobbys}
+
+%-------------------------------------------------------------------------------
+%   CONTENT
+%-------------------------------------------------------------------------------
+\vspace{0.8em}
+\hbox{%
+    \hobby{\faIcon{running}}{practice judo}{second bundesliga}%
+    \hfill%
+    \hobby{\faIcon[regular]{comments}}{politics}{Freie Demokraten}%
+    \hfill%
+    \hobby{\faIcon{code}}{coding}{smaller hackathons}%
+}
 
 
 \end{document}

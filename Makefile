@@ -1,5 +1,5 @@
 OBJDIR := build
-OBJS := $(addprefix $(OBJDIR)/,cv.pdf coverletter.pdf)
+OBJS := $(addprefix $(OBJDIR)/,coverletter.pdf cv.pdf)
 URL := "https://www.gfz-potsdam.de/fileadmin/gfz/medien_kommunikation/pics/LOGO-GFZ-de-mitFreistellungsraum_RGB_24bit_300dpi_546x390-jpg.jpg"
 
 all: $(OBJS)
@@ -9,6 +9,9 @@ scripts/colors.tex: scripts/color_picker.py
 
 $(OBJDIR)/%.pdf: content/%.tex scripts/colors.tex fonts
 	xelatex -output-directory=$(OBJDIR) content/$*.tex
+
+$(OBJDIR)/united.pdf: $(OBJS)
+	pdfunite $(OBJS) $@
 
 fonts:
 	ln -s Awesome-CV/$@ $@
