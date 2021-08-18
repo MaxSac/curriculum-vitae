@@ -36,7 +36,10 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-\newcommand{\hobby}[3]{\hbox{{\Large{#1}}\quad\parbox{5.5cm}{{#2}\\{\bodyfontlight{#3}}}}}%
+\newcommand{\hobby}[3]{\hbox{{\Large{#1}}\quad\parbox{5.5cm}{\entrytitlestyle{#2}\\[-0.2em]{\descriptionstyle{#3}}}}}%
+
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo[circle,edge,left]{images/Bewerbungsfoto.JPG}
 
 \input{content/letterhead}
 
@@ -53,6 +56,7 @@
 {\today}
 {Maximilian Sackel~~~·~~~Curriculum Vitae}
 {\thepage}
+
 
 
 %-------------------------------------------------------------------------------
@@ -98,17 +102,6 @@
 
 \cvsection{Skills}
 \begin{cvskills}
-
-    %%---------------------------------------------------------
-    %\cvskill
-    %{DevOps} % Category
-    %{AWS, Docker, Kubernetes, Rancher, Vagrant, Packer, Terraform, Jenkins, CircleCI} % Skills
-
-    %%---------------------------------------------------------
-    %\cvskill
-    %{Back-end} % Category
-    %{Koa, Express, Django, REST API} % Skills
-
     %---------------------------------------------------------
     \cvskill
     {Build Automation} % Category
@@ -137,13 +130,10 @@
     \cvskill
     {Languages} % Category
     {German, English} % Skills
-
-    %---------------------------------------------------------
 \end{cvskills}
 
 \cvsection{Experience}
 \begin{cventries}
-
     %---------------------------------------------------------
     \cventry
     {Teaching Assistant} % Job title
@@ -169,20 +159,16 @@
         \item {Experiences in working group for organized development of the most used simulation program in astroparticle physics}
         \end{cvitems}
     }
-
 \end{cventries}
 
 %-------------------------------------------------------------------------------
 %   SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{Publication \& Talks}
-
-
 %-------------------------------------------------------------------------------
 %   CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
-
     %---------------------------------------------------------
     \cventry
     {Presenter for <Electromagnetic shower simulation using PROPOSAL>} % Role
@@ -224,18 +210,17 @@
             large-scale high-energy Monte Carlo simulations. DOI:~\href{https://doi.org/10.1088/1742-6596/1690/1/012021}{10.1088/1742-6596/1690/1/012021}}
         \end{cvitems}
     }
-
 \end{cventries}
 
 %-------------------------------------------------------------------------------
 %   SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{Hobbys}
-
 %-------------------------------------------------------------------------------
 %   CONTENT
 %-------------------------------------------------------------------------------
 \vspace{0.8em}
+
 \hbox{%
     \hobby{\faIcon{running}}{practice judo}{second bundesliga}%
     \hfill%
@@ -243,6 +228,4 @@
     \hfill%
     \hobby{\faIcon{code}}{coding}{smaller hackathons}%
 }
-
-
 \end{document}
