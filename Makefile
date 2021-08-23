@@ -24,3 +24,4 @@ $(OBJDIR):
 clean:
 	make -C scripts clean
 	rm -rf $(OBJDIR) fonts
+	rm scripts/colors.tex
