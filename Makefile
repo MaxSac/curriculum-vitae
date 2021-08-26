@@ -1,5 +1,5 @@
 OBJDIR := build
-OBJS := $(addprefix $(OBJDIR)/,coverletter.pdf cv.pdf)
+OBJS := $(addprefix $(OBJDIR)/,coverletter.pdf cv.pdf united.pdf)
 URL := "https://www.gfz-potsdam.de/fileadmin/gfz/medien_kommunikation/pics/LOGO-GFZ-de-mitFreistellungsraum_RGB_24bit_300dpi_546x390-jpg.jpg"
 
 all: $(OBJS)
@@ -10,8 +10,13 @@ scripts/colors.tex: scripts/color_picker.py
 $(OBJDIR)/%.pdf: content/%.tex scripts/colors.tex fonts
 	xelatex -output-directory=$(OBJDIR) content/$*.tex
 
-$(OBJDIR)/united.pdf: $(OBJS)
-	pdfunite $(OBJS) $@
+$(OBJDIR)/zeugnis.pdf: images/bachelor_zeugnis.pdf images/bachelor_detail.pdf
+	pdfunite images/bachelor_zeugnis.pdf images/bachelor_detail.pdf $(OBJDIR)/zeugnis_high_res.pdf
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $(OBJDIR)/zeugnis_high_res.pdf
+
+$(OBJDIR)/united.pdf: $(addprefix $(OBJDIR)/,coverletter.pdf cv.pdf zeugnis.pdf)
+	pdfunite $(addprefix $(OBJDIR)/,coverletter.pdf cv.pdf zeugnis.pdf) $@
+
 
 fonts:
 	ln -s Awesome-CV/$@ $@
