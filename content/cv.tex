@@ -20,6 +20,8 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{Awesome-CV/awesome-cv}
 
+\usepackage[ngerman]{babel}
+
 % Configure page margins with geometry
 \geometry{left=2.5cm, top=.8cm, right=2.0cm, bottom=1.8cm, footskip=.5cm}
 
@@ -64,13 +66,13 @@
 %   Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
-\cvsection{Education}
+\cvsection{Bildung und Qualifikationen}
 \begin{cventries}
     \cventry
-    {M.Sc. in Physics \quad (Final Grade: 1.8)} % Degree
-    {Technical University Dortmund} % Institution
-    {Dortmund, Germany} % Location
-    {Oct. 2018 - Jun. 2021} % Date(s)
+    {M.Sc. in Physik \quad (Abschlussnote: 1.8)} % Degree
+    {Technische Universtität Dortmund} % Institution
+    {Dortmund, Deutschland} % Location
+    {Okt. 2018 - Jun. 2021} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
         \item {Thesis: First electromagnetic interaction model in CORSIKA~8 using the Monte Carlo simulation tool PROPOSAL}
@@ -78,10 +80,10 @@
     }%
 
     \cventry
-    {B.Sc. in Physics \quad (Final Grade: 2.4)} % Degree
-    {Technical University Dortmund} % Institution
-    {Dortmund, Germany} % Location
-    {Oct. 2014 - Sep. 2018} % Date(s)
+    {B.Sc. in Physik \quad (Abschlussnote: 2.4)} % Degree
+    {Technische Universtität Dortmund} % Institution
+    {Dortmund, Deutschland} % Location
+    {Okt. 2014 - Sep. 2018} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
         \item {Thesis: Gamma/Hadron separation with measured background data with FACT}
@@ -91,16 +93,16 @@
     \cventry
     {Allgemeine Hochschulreife} % Degree
     {Käthe-Kollwitz-Gymnasium} % Institution
-    {Dortmund, Germany} % Location
+    {Dortmund, Deutschland} % Location
     {Aug. 2006 - Jun. 2014} % Date(s)
     {
         \begin{cvitems} % Description(s) bullet points
-        \item {Advanced courses in mathematics and physics}
+        \item {Leistungskurse in Mathematik and Physik}
         \end{cvitems}
     }%
 \end{cventries}
 
-\cvsection{Skills}
+\cvsection{Kompetenzen}
 \begin{cvskills}
     %---------------------------------------------------------
     \cvskill
@@ -123,35 +125,36 @@
 
     %---------------------------------------------------------
     \cvskill
-    {Languages} % Category
+    {Sprachen} % Category
     {German, English} % Skills
 \end{cvskills}
 
-\cvsection{Experience}
+\cvsection{Berufserfahrung}
 \begin{cventries}
     %---------------------------------------------------------
     \cventry
-    {Teaching Assistant} % Job title
-    {Statistical methods of data analysis (Prof.~Dr.~Dr.~W.~Rhode)} % Organization
-    {Dortmund, Germany} % Location
-    {Oct. 2018 - Sep. 2020} % Date(s)
+    {Lehrassistent} % Job title
+    {Statistische Methoden der Datenanalyse (Prof.~Dr.~Dr.~W.~Rhode)} % Organization
+    {Dortmund, Deutschland} % Location
+    {Okt. 2018 - Sep. 2020} % Date(s)
     {
         \begin{cvitems} % Description(s) of tasks/responsibilities
             % \item {The appropriate use of statistical methods for the analysis of
             %     moderate to very large amounts of data is instucted on the basis of the chronological sequence of a data analysis.}
-        \item {Teaching 4/5-sem. B.Sc.\ or 1/2-sem. M.Sc.~students in the appropriate use of statistical methods to analyze large data sets}
+        \item {Unterricht in der sachgerechten Anwendung von statistischen Methoden zur Analyse großer Datensätze}
         \end{cvitems}
     }
 
     %---------------------------------------------------------
     \cventry
-    {Working group Member} % Job title
+    {Arbeitsgruppenmitglied} % Job title
     {Towards a next generation of CORSIKA} % Organization
-    {Karlsruhe, Germany} % Location
-    {Nov. 2019 - PRESENT} % Date(s)
+    {Karlsruhe, Deutschland} % Location
+    {Nov. 2019 - GEGENWART} % Date(s)
     {
         \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Experiences in working group for organized development of the most used simulation program in astroparticle physics}
+        \item {Erfahrungen in der Arbeitsgruppe zur organisierten
+            Entwicklung eines der meistgenutzten Simulationsprogamm in der Physik}
         \end{cvitems}
     }
 \end{cventries}
@@ -159,50 +162,48 @@
 %-------------------------------------------------------------------------------
 %   SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Publication \& Talks}
+\cvsection{Publikationen \& Präsentationen}
 %-------------------------------------------------------------------------------
 %   CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
     %---------------------------------------------------------
     \cventry
-    {Presenter for <Electromagnetic shower simulation using PROPOSAL>} % Role
-    {CORSIKA Cosmic Ray Simulation Workshop at KIT} % Event
-    {Karlsruhe, Germany} % Location
+    {Vortragender <Electromagnetic shower simulation using PROPOSAL>} % Role
+    {CORSIKA Cosmic Ray Simulation Workshop am KIT} % Event
+    {Karlsruhe, Deutschland} % Location
     {Jun. 2020} % Date(s)
     {
         \begin{cvitems} % Description(s)
-        \item {Introduce the first leptonic and photonic interaction model in
-                the recent version of the Monte Carlo library for extensiv air
-            shower.}
-        \item {Insights into how the underlying runtime intensive computations can be performed effectively on resource limited systems.}
+        \item {Einführung des ersten leptonischen und photonischen
+            Wechselwirkungsmodells in der aktuellen Version der
+        Monte-Carlo Bibliothek für ausgedehnte Luftschauer}
+        \item {Einblicke in die zugrunde liegenden laufzeitintensiven Berechnungen auf ressourcenbeschränkten Systemen}
         \end{cvitems}
     }
 
     %---------------------------------------------------------
     \cventry
-    {Co-Writer} % Role
+    {Co-Autor} % Role
     {Electromagnetic Shower Simulation for CORSIKA 8} % Title
-    {ICRC Berlin, Germany} % Location
+    {ICRC Berlin, Deutschland} % Location
     {Jul. 2021} % Date(s)
     {
         \begin{cvitems} % Description(s)
-        \item {Comparison of typical electromagnetic quantities against standard tools to evaluate the new electromagnetic module based on PROPOSAL.  DOI:~\href{https://doi.org/10.22323/1.395.0428}{10.22323/1.395.0428}
+        \item {Vergleich typischer elektromagnetischer Größen mit Standardwerkzeugen zur Bewertung des neuen elektromagnetischen Moduls auf der Grundlage von PROPOSAL DOI:~\href{https://doi.org/10.22323/1.395.0428}{10.22323/1.395.0428}
             }
         \end{cvitems}
     }
 
     %---------------------------------------------------------
     \cventry
-    {Co-Writer} % Role
+    {Co-Autor} % Role
     {PROPOSAL:\@ A library to propagate leptons and high energy photons} % Title
-    {ICPPA Moscow, Russian Fed.} % Location
+    {ICPPA Moscow, Russland} % Location
     {Dec. 2020} % Date(s)
     {
         \begin{cvitems} % Description(s)
-        \item {Implementation of new photonic and electrical processes for the
-                development of an electromagnetic module that can form the basis of
-            large-scale high-energy Monte Carlo simulations. DOI:~\href{https://doi.org/10.1088/1742-6596/1690/1/012021}{10.1088/1742-6596/1690/1/012021}}
+        \item {Implementierung neuer photonischer und elektrischer Prozesse für die Entwicklung eines elektromagnetischen Moduls, das die Grundlage für groß angelegte Hochenergie-Monte-Carlo-Simulationen bilden kann DOI:~\href{https://doi.org/10.1088/1742-6596/1690/1/012021}{10.1088/1742-6596/1690/1/012021}}
         \end{cvitems}
     }
 \end{cventries}
@@ -217,10 +218,10 @@
 \vspace{0.8em}
 
 \hbox{%
-    \hobby{\faIcon{running}}{practice judo}{second bundesliga}%
+    \hobby{\faIcon{running}}{Judo}{zweite Bundesliga}%
     \hfill%
-    \hobby{\faIcon[regular]{comments}}{politics}{local and digital orientation}%
+    \hobby{\faIcon[regular]{comments}}{Politik}{lokales und digitales}%
     \hfill%
-    \hobby{\faIcon{code}}{coding}{smaller hackathons}%
+    \hobby{\faIcon{code}}{Coding}{kleinere Hackathons}%
 }
 \end{document}
