@@ -1,0 +1,25 @@
+Sehr geehrte Frau Elsberger,
+
+anbei mein persönliches Feedback, worum Herr Dr. Berlin und Herr Fuhrmanek mich gebeten haben.
+
+Das erste Kennenlernen war ein sehr kurzweiliges und angenehmes Gespräch.
+Ich hatte stets das Gefühl, einen ersten Einblick in die Firma und die zu lösenden Problemstellungen gewährt zu bekommen.
+Dabei waren sowohl Herr Dr. Berlin als auch Herr Fuhrmanek sehr freundlich, sind auf Fragestellungen eingegangen und haben verschiedene Sachverhalte gut erklärt.
+
+Die Fragen waren gut motiviert, sind aber als Person, welche noch nicht mit dem Tagesgeschäft vertraut ist, zum Teil anspruchsvoll gewesen.
+Dennoch hat sich daraus meist ein gutes Gespräch entwickelt und ich hoffe, wir sind auf die erwünschte Lösung gekommen.
+
+Die Zeit von einer Stunde kam mir als Bewerbender angenehm vor. 
+Die Aussicht, eine mögliche Aufgabe gestellt zu bekommen, spornt mich an. 
+Ich hoffe, ich bekomme die Gelegenheit, einen Vorschlag einzureichen und mit Ihnen gemeinsam drüber zu diskutieren.
+
+Die kurze Codeing Frage ("pandas-joins") empfand ich als schwierig zu beantworten (Ich hatte nur eine alternative und nicht die primäre Lösung parat).
+Lieber hätte ich den Zweizeiler kurz runter programmiert, was aber mit zwei geteilten Bildschirmen sicherlich schwer gewesen wäre?
+Ich habe aber auch ehrlich gesagt vergessen zu fragen, ob es eine zulässige Lösung gewesen wäre.
+Vielleicht gibt es ja eine alternative Möglichkeit, das Wissen in Zukunft abzufragen. (Vielleicht den Datensatz als gepickeltes DataFrame kurz über den Chat hochladen?)
+
+Summasummarum war es eine produktive Stunde und das Format in dieser Form mit dem Team hat mir gefallen und soll bitte so beibehalten werden.
+
+Mit freundlichen Grüßen
+
+Maximilian Sackel
